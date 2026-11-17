@@ -227,15 +227,15 @@
     <li><strong>No Biometric or Facial Recognition:</strong> Camera pixels are encoded directly as raw YUV/RGB frames without facial recognition or biometric profiling.</li>
   </ul>
 
-  <h2>5. Windows OBS Plugin &amp; Installer Details</h2>
+  <h2>5. Windows Plugin &amp; Installer Details</h2>
   <p>
-    The companion <strong>Camybr Windows Plugin</strong> is free software (freeware) that runs as a native 64-bit DLL inside OBS Studio on Windows:
+    The companion <strong>Camybr Windows Plugin</strong> is free software (freeware) that provides a system-wide DirectShow virtual camera (<code>Camybr</code>) and virtual microphone (<code>Camybr Audio</code>) for Windows, compatible with OBS Studio, Zoom, Microsoft Teams, Google Meet, Discord, Skype, and all Windows video applications:
   </p>
   <ul>
-    <li><strong>Local Web Control Server:</strong> The plugin hosts an embedded lightweight HTTP server strictly on <code>http://localhost:4752/</code> (IPv4 loopback address <code>127.0.0.1</code>). It is completely blocked from the outside internet and only serves the OBS Quick Controls dock on your local PC.</li>
-    <li><strong>Zero Telemetry:</strong> The desktop plugin contains zero tracking scripts, analytics libraries, advertising SDKs, or external internet connections.</li>
-    <li><strong>Windows Installer:</strong> The setup installer (<code>Camybr-Windows-v1.0.0-Setup.exe</code>) places plugin binaries in <code>%ProgramData%\obs-studio\plugins\Camybr\</code> and registers the browser dock in your local OBS configuration file (<code>%APPDATA%\obs-studio\user.ini</code>). It collects no personal information.</li>
-    <li><strong>Open Source Auditability:</strong> The full native source code of the Windows plugin is publicly hosted and verifiable at <a href="https://github.com.briyoom.camybr" target="_blank">https://github.com.briyoom.camybr</a>.</li>
+    <li><strong>Local Web Control Server:</strong> The software hosts an embedded lightweight HTTP server strictly on <code>http://localhost:4752/</code> (IPv4 loopback address <code>127.0.0.1</code>). It is completely blocked from the outside internet and only serves local camera controls on your PC.</li>
+    <li><strong>Zero Telemetry:</strong> The desktop software contains zero tracking scripts, analytics libraries, advertising SDKs, or external internet connections.</li>
+    <li><strong>Windows Installer:</strong> The setup installer (<code>Camybr-Windows-v1.0.0-Setup.exe</code>) places binaries in <code>C:\Program Files\Camybr\</code> and registers the DirectShow virtual camera and virtual microphone drivers. It collects no personal information.</li>
+    <li><strong>Official Portal:</strong> Official binary releases, setup documentation, and the issue tracker for Camybr are hosted at <a href="https://github.com/ybrdigital/camybr" target="_blank">https://github.com/ybrdigital/camybr</a>.</li>
   </ul>
 
   <h2>6. In-App Subscriptions &amp; Financial Information</h2>
