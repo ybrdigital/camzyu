@@ -1,27 +1,27 @@
 /**
- * MobCam - OBS Studio Camera | Modern Web Engine
+ * Camybr - Professional Windows Webcam & Microphone | Modern Web Engine
  * Developer: Yash Rayjada (YBR Digital)
- * Repository: https://github.com/ybrdigital/mobcam
- * License: GPL-2.0-or-later
+ * Repository: https://github.com/ybrdigital/camybr
+ * License: Freeware / Proprietary (Closed-Source)
  */
 
 // ============================================================================
 // 1. Central Version Configuration & Fallback Definition
 // ============================================================================
 const DEFAULT_VERSION_CONFIG = {
-  product: "MobCam OBS Studio Plugin",
+  product: "Camybr Windows Plugin",
   version: "1.0.0",
   tag: "v1.0.0",
-  releaseDate: "September 25, 2026",
+  releaseDate: "November 17, 2026",
   windowsCompatibility: "Windows 10 / 11 (64-bit)",
-  obsCompatibility: "OBS Studio 28.0 - 31.0+ (64-bit)",
+  appCompatibility: "Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio",
   architecture: "x64",
-  installerFilename: "MobCam-OBS-Plugin-v1.0.0-Setup.exe",
-  installerPath: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
-  downloadUrl: "assets/downloads/v1.0.0/MobCam-OBS-Plugin-v1.0.0-Setup.exe",
-  githubReleaseUrl: "https://github.com/ybrdigital/mobcam/releases",
-  fileSize: "2.1 MB",
-  sha256: "A33CD424E25D638B5BA3920264BE76C270F2B61FD7E0014817AEA5D5F84BFEEB"
+  installerFilename: "Camybr-Windows-v1.0.0-Setup.exe",
+  installerPath: "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
+  downloadUrl: "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
+  githubReleaseUrl: "https://github.com/ybrdigital/camybr/releases",
+  fileSize: "12.4 MB",
+  sha256: "7E87C904EAC0AD9D10685798CCDC982BD87703CE20545D94696144A2C7085A40"
 };
 
 let activeVersionConfig = { ...DEFAULT_VERSION_CONFIG };
@@ -49,12 +49,12 @@ async function initVersionData() {
       activeVersionConfig = { ...DEFAULT_VERSION_CONFIG, ...data };
     }
   } catch (err) {
-    console.warn("[MobCam] Using local fallback version config:", err);
+    console.warn("[Camybr] Using local fallback version config:", err);
   }
 
-  // Optionally query GitHub API for releases without exposing credentials
+  // Optionally query GitHub API for releases
   try {
-    const ghRes = await fetch("https://api.github.com/repos/ybrdigital/mobcam/releases/latest", {
+    const ghRes = await fetch("https://api.github.com/repos/ybrdigital/camybr/releases/latest", {
       headers: { Accept: "application/vnd.github.v3+json" }
     });
     if (ghRes.ok) {
@@ -73,8 +73,7 @@ async function initVersionData() {
       }
     }
   } catch (ghErr) {
-    // Graceful fallback to verified bundled asset
-    console.debug("[MobCam] GitHub Releases API query skipped or rate-limited:", ghErr);
+    console.debug("[Camybr] GitHub Releases API query skipped or rate-limited:", ghErr);
   }
 
   applyVersionDataToUI(activeVersionConfig);

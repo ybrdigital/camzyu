@@ -4,11 +4,15 @@ bin/
 obj/
 x64/
 x86/
-release/
 [Dd]ebug/
 plugin/build/
 plugin/bin/
 plugin/installer/Output/
+
+# Allow release distribution binaries
+!release/
+!release/*.exe
+!release/*.txt
 
 # Visual Studio temporary files
 .vs/
