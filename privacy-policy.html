@@ -141,10 +141,10 @@
   <ul>
     <li><strong>Direct Local Transmission:</strong> Your phone hardware encodes camera video into H.264/HEVC video frames and microphone audio into AAC audio packets. These packets are transmitted directly across your local network (LAN) or USB tethering connection:
       <ul>
-        <li><strong>UDP Port 4750 (Inbound on PC):</strong> Device discovery beacon sent by the Android app across the local subnet to detect available devices.</li>
-        <li><strong>TCP Port 4747 (Outbound to Phone):</strong> Control and handshake connection for remote camera settings (zoom, focus, exposure, torch).</li>
-        <li><strong>TCP Port 4748 (Outbound to Phone):</strong> Dedicated raw video media stream socket.</li>
-        <li><strong>TCP Port 4749 (Outbound to Phone):</strong> Dedicated raw audio media stream socket.</li>
+        <li><strong>UDP Port 7113 (Inbound on PC):</strong> Device discovery beacon sent by the Android app across the local subnet to detect available devices.</li>
+        <li><strong>TCP Port 7110 (Outbound to Phone):</strong> Control and handshake connection for remote camera settings (zoom, focus, exposure, torch).</li>
+        <li><strong>TCP Port 7111 (Outbound to Phone):</strong> Dedicated raw video media stream socket.</li>
+        <li><strong>TCP Port 7112 (Outbound to Phone):</strong> Dedicated raw audio media stream socket.</li>
       </ul>
     </li>
     <li><strong>No Cloud Relay or Intermediate Servers:</strong> Video frames and audio samples are never transmitted across the public internet, content delivery networks (CDNs), or third-party cloud storage.</li>

@@ -61,10 +61,10 @@ Camzyu operates purely on a peer-to-peer (P2P) local network architecture. Zero 
 
 | Port | Protocol | Direction | Listening Component | Initiator | Purpose |
 |---|---|---|---|---|---|
-| **4750** | UDP | Inbound on PC | PC Plugin | Android App | Local subnet device beacon auto-discovery |
-| **4747** | TCP | Outbound from PC | Android App | PC Plugin | Control handshake and camera settings |
-| **4748** | TCP | Outbound from PC | Android App | PC Plugin | H.264 video media stream |
-| **4749** | TCP | Outbound from PC | Android App | PC Plugin | AAC audio media stream |
+| **7113** | UDP | Inbound on PC | PC Plugin | Android App | Local subnet device beacon auto-discovery |
+| **7110** | TCP | Outbound from PC | Android App | PC Plugin | Control handshake and camera settings |
+| **7111** | TCP | Outbound from PC | Android App | PC Plugin | H.264 video media stream |
+| **7112** | TCP | Outbound from PC | Android App | PC Plugin | AAC audio media stream |
 
 ---
 

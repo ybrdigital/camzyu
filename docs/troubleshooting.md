@@ -44,11 +44,11 @@ The camera feed shows the dark standby card with "Camzyu" and "Waiting for phone
 Windows Defender Firewall may prompt to allow network connections on the first run. To manually configure firewall rules via PowerShell (Run as Administrator):
 
 ```powershell
-# Allow incoming UDP discovery beacons on port 4750
-New-NetFirewallRule -DisplayName "Camzyu PC Plugin - UDP Discovery" -Direction Inbound -LocalPort 4750 -Protocol UDP -Action Allow
+# Allow incoming UDP discovery beacons on port 7113
+New-NetFirewallRule -DisplayName "Camzyu PC Plugin - UDP Discovery" -Direction Inbound -LocalPort 7113 -Protocol UDP -Action Allow
 
 # Allow outbound TCP media streaming & controls
-New-NetFirewallRule -DisplayName "Camzyu PC Plugin - TCP Media & Control" -Direction Outbound -RemotePort 4747,4748,4749 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "Camzyu PC Plugin - TCP Media & Control" -Direction Outbound -RemotePort 7110,7111,7112 -Protocol TCP -Action Allow
 ```
 
 ---
