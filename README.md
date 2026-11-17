@@ -19,7 +19,7 @@
 
 ## Overview
 
-**Camzyu PC Plugin** is a high-performance, system-wide virtual webcam and virtual microphone. Currently available for Windows 10 and Windows 11 (64-bit), with macOS and Linux support in development. It enables live streamers, remote professionals, students, and content creators to use their smartphone's superior camera optics, autofocus, and microphone directly on PC without requiring capture cards, dummy drivers, or cloud streaming subscriptions.
+**Camzyu PC Plugin** is a high-performance, system-wide virtual webcam and virtual microphone for Windows 10 and Windows 11 (64-bit). It enables live streamers, remote professionals, students, and content creators to use their smartphone's superior camera optics, autofocus, and microphone directly on PC without requiring capture cards, dummy drivers, or cloud streaming subscriptions.
 
 - **Official Website & Live Documentation**: [https://ybrdigital.github.io/camzyu/](https://ybrdigital.github.io/camzyu/)
 - **Official GitHub Repository**: [https://github.com/ybrdigital/camzyu](https://github.com/ybrdigital/camzyu)
@@ -48,7 +48,7 @@
 
 | Component | Requirement |
 |---|---|
-| **Operating System** | Windows 10 (64-bit) / Windows 11 (64-bit) &bull; *(macOS & Linux in development)* |
+| **Operating System** | Windows 10 (64-bit) / Windows 11 (64-bit) |
 | **Compatible Desktop Apps** | Zoom, Microsoft Teams, Google Meet, Discord, OBS Studio, Skype, and DirectShow-compatible apps |
 | **Android Client** | Android 8.0 Oreo (API 26) or newer with Camera2 API support |
 | **Connectivity** | 5 GHz Wi-Fi or USB connection (Android USB Tethering) |
@@ -76,7 +76,7 @@ Official binary downloads are published via [GitHub Releases](https://github.com
 
 | Package | Platform | Architecture | Distribution Link |
 |---|---|---|---|
-| **Camzyu PC Plugin** | Windows 10 / 11 *(macOS & Linux soon)* | x64 (64-bit) | [Camzyu-Windows-v1.0.0-Setup.exe](https://github.com/ybrdigital/camzyu/releases/latest/download/Camzyu-Windows-v1.0.0-Setup.exe) |
+| **Camzyu PC Plugin** | Windows 10 / 11 | x64 (64-bit) | [Camzyu-Windows-v1.0.0-Setup.exe](https://github.com/ybrdigital/camzyu/releases/latest/download/Camzyu-Windows-v1.0.0-Setup.exe) |
 | **Android Application** | Android 8.0+ | arm64-v8a / armeabi-v7a | [Google Play Store Listing](https://play.google.com/store/apps/details?id=com.briyoom.camzyu) |
 
 *Local fallback installer binary and metadata are preserved under [`assets/downloads/v1.0.0/`](assets/downloads/v1.0.0/).*

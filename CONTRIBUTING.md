@@ -22,7 +22,7 @@ Official development of Camzyu software is managed exclusively by the author.
 Users, creators, streamers, and remote professionals are warmly welcome to submit bug reports, compatibility feedback, and feature suggestions through [GitHub Issues](https://github.com/ybrdigital/camzyu/issues).
 
 When reporting an issue, please include:
-- OS version (e.g., Windows 11 24H2 64-bit, macOS, Linux)
+- Windows OS version (e.g., Windows 11 24H2 64-bit, Windows 10 22H2 64-bit)
 - Target software where Camzyu was used (e.g., Zoom, Google Meet, Microsoft Teams, OBS Studio)
 - Android phone model and Android version
 - Connection mode (5 GHz Wi-Fi or USB Tethering)

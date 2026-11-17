@@ -12,7 +12,7 @@ const DEFAULT_VERSION_CONFIG = {
   product: "Camzyu PC Plugin",
   version: "1.0.0",
   tag: "v1.0.0",
-  windowsCompatibility: "Windows 10 / 11 (64-bit), macOS & Linux coming soon",
+  windowsCompatibility: "Windows 10 / 11 (64-bit)",
   appCompatibility: "Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio",
   architecture: "x64",
   installerFilename: "Camzyu-Windows-v1.0.0-Setup.exe",
