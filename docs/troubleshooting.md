@@ -1,7 +1,7 @@
-# Camybr - Professional Windows Webcam & Microphone Plugin
+# Camybr - PC Plugin
 ## Troubleshooting & Diagnostics Guide
 
-This guide covers common issues, diagnostic procedures, firewall configuration, and performance optimization when using Camybr with Windows applications (Zoom, Teams, Meet, Discord, OBS Studio).
+This guide covers common issues, diagnostic procedures, firewall configuration, and performance optimization when using Camybr with desktop applications (Zoom, Teams, Meet, Discord, OBS Studio).
 
 ---
 
@@ -11,8 +11,8 @@ This guide covers common issues, diagnostic procedures, firewall configuration, 
 In Zoom, Teams, Meet, or Discord settings, **Camybr** or **Camybr Audio** is not listed in the camera or microphone dropdown.
 
 ### Solutions
-1. **Verify Windows Plugin Installation**:
-   Ensure the Camybr Windows Plugin was installed using administrator privileges. The installer registers the DirectShow virtual camera filter in the Windows registry.
+1. **Verify PC Plugin Installation**:
+   Ensure the Camybr PC Plugin was installed using administrator privileges. The installer registers the DirectShow virtual camera filter in the Windows registry.
 2. **Re-register the DirectShow Filters**:
    Open PowerShell as Administrator and run:
    ```powershell
@@ -45,10 +45,10 @@ Windows Defender Firewall may prompt to allow network connections on the first r
 
 ```powershell
 # Allow incoming UDP discovery beacons on port 4750
-New-NetFirewallRule -DisplayName "Camybr Windows Plugin - UDP Discovery" -Direction Inbound -LocalPort 4750 -Protocol UDP -Action Allow
+New-NetFirewallRule -DisplayName "Camybr PC Plugin - UDP Discovery" -Direction Inbound -LocalPort 4750 -Protocol UDP -Action Allow
 
 # Allow outbound TCP media streaming & controls
-New-NetFirewallRule -DisplayName "Camybr Windows Plugin - TCP Media & Control" -Direction Outbound -RemotePort 4747,4748,4749 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "Camybr PC Plugin - TCP Media & Control" -Direction Outbound -RemotePort 4747,4748,4749 -Protocol TCP -Action Allow
 ```
 
 ---

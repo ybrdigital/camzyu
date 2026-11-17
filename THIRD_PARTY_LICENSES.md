@@ -1,16 +1,16 @@
 # Third-Party Notices & Licenses
 
-This document lists the third-party software, libraries, and open-source components utilized by the **Camybr Windows Plugin** binary distribution and the official website, along with their respective copyright notices and license terms.
+This document lists the third-party software, libraries, and open-source components utilized by the **Camybr PC Plugin** binary distribution and the official website, along with their respective copyright notices and license terms.
 
 ---
 
-## 1. Desktop Application & Windows Plugin Runtime Dependencies
+## 1. Desktop Application & PC Plugin Runtime Dependencies
 
 ### 1.1 FFmpeg (libavcodec, libavutil, libswscale, libswresample)
 - **Project**: [FFmpeg](https://ffmpeg.org/)
 - **Copyright**: &copy; 2000–2026 the FFmpeg developers
 - **License**: GNU Lesser General Public License v2.1 or later (`LGPL-2.1-or-later`) / GNU General Public License v2.0 or later (`GPL-2.0-or-later`)
-- **Usage**: Camybr Windows Plugin dynamically links against FFmpeg shared runtime libraries (`avcodec-61.dll`, `avutil-59.dll`, `swresample-5.dll`, `swscale-8.dll`, `libx264-164.dll`, `zlib.dll`) for high-performance H.264 video decoding and AAC audio processing.
+- **Usage**: Camybr PC Plugin dynamically links against FFmpeg shared runtime libraries (`avcodec-61.dll`, `avutil-59.dll`, `swresample-5.dll`, `swscale-8.dll`, `libx264-164.dll`, `zlib.dll`) for high-performance H.264 video decoding and AAC audio processing.
 - **Compliance**: The FFmpeg libraries are bundled as unmodified shared DLLs in accordance with LGPL/GPL dynamic linking provisions. Full source code of the underlying FFmpeg release is available at [ffmpeg.org](https://ffmpeg.org).
 
 ### 1.2 Inno Setup

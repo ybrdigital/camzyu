@@ -1,5 +1,5 @@
 /**
- * Camybr - Professional Windows Webcam & Microphone | Modern Web Engine
+ * Camybr - PC Plugin | Modern Web Engine
  * Developer: Yash Rayjada (YBR Digital)
  * Repository: https://github.com/ybrdigital/camybr
  * License: Freeware / Proprietary (Closed-Source)
@@ -9,19 +9,17 @@
 // 1. Central Version Configuration & Fallback Definition
 // ============================================================================
 const DEFAULT_VERSION_CONFIG = {
-  product: "Camybr Windows Plugin",
+  product: "Camybr PC Plugin",
   version: "1.0.0",
   tag: "v1.0.0",
-  releaseDate: "November 17, 2026",
-  windowsCompatibility: "Windows 10 / 11 (64-bit)",
+  windowsCompatibility: "Windows 10 / 11 (64-bit), macOS & Linux coming soon",
   appCompatibility: "Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio",
   architecture: "x64",
   installerFilename: "Camybr-Windows-v1.0.0-Setup.exe",
   installerPath: "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
   downloadUrl: "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
   githubReleaseUrl: "https://github.com/ybrdigital/camybr/releases",
-  fileSize: "12.4 MB",
-  sha256: "7E87C904EAC0AD9D10685798CCDC982BD87703CE20545D94696144A2C7085A40"
+  fileSize: "12.4 MB"
 };
 
 let activeVersionConfig = { ...DEFAULT_VERSION_CONFIG };
@@ -31,10 +29,8 @@ let activeVersionConfig = { ...DEFAULT_VERSION_CONFIG };
 // ============================================================================
 document.addEventListener("DOMContentLoaded", () => {
   initVersionData();
-  initCopyChecksum();
   initSmoothScroll();
   initNavbarScroll();
-  initScreenshotLightbox();
   setDynamicYear();
 });
 
@@ -93,44 +89,10 @@ function applyVersionDataToUI(cfg) {
 
   const elSize = document.querySelectorAll(".dynamic-file-size");
   elSize.forEach(el => el.textContent = cfg.fileSize);
-
-  const elDate = document.querySelectorAll(".dynamic-release-date");
-  elDate.forEach(el => el.textContent = cfg.releaseDate);
-
-  const elHash = document.querySelectorAll(".dynamic-sha256");
-  elHash.forEach(el => el.textContent = cfg.sha256);
-
-  const elCopy = document.querySelectorAll(".btn-copy-checksum");
-  elCopy.forEach(btn => btn.setAttribute("data-hash", cfg.sha256));
 }
 
 // ============================================================================
-// 4. SHA-256 Checksum Copy Helper
-// ============================================================================
-function initCopyChecksum() {
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".btn-copy-checksum");
-    if (!btn) return;
-
-    const hash = btn.getAttribute("data-hash") || activeVersionConfig.sha256;
-    if (!hash) return;
-
-    navigator.clipboard.writeText(hash).then(() => {
-      const origText = btn.innerHTML;
-      btn.innerHTML = `<i class="fas fa-check text-green me-1"></i><span>Copied!</span>`;
-      btn.classList.add("copied");
-      setTimeout(() => {
-        btn.innerHTML = origText;
-        btn.classList.remove("copied");
-      }, 2500);
-    }).catch(err => {
-      console.error("Failed to copy checksum:", err);
-    });
-  });
-}
-
-// ============================================================================
-// 5. Smooth Scroll Navigation
+// 4. Smooth Scroll Navigation
 // ============================================================================
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -160,7 +122,7 @@ function initSmoothScroll() {
 }
 
 // ============================================================================
-// 6. Sticky Navbar Background Blur & Scroll State
+// 5. Sticky Navbar Background Blur & Scroll State
 // ============================================================================
 function initNavbarScroll() {
   const navbar = document.querySelector("#mainNav");
@@ -179,35 +141,7 @@ function initNavbarScroll() {
 }
 
 // ============================================================================
-// 7. Screenshot Lightbox / Modal Viewer
-// ============================================================================
-function initScreenshotLightbox() {
-  const modalEl = document.getElementById("screenshotModal");
-  if (!modalEl) return;
-
-  const modalImg = modalEl.querySelector(".modal-screenshot-img");
-  const modalTitle = modalEl.querySelector(".modal-title");
-
-  document.querySelectorAll("[data-bs-toggle='lightbox']").forEach(item => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      const imgSrc = item.getAttribute("data-src") || item.getAttribute("href");
-      const imgAlt = item.getAttribute("data-caption") || item.querySelector("img")?.alt || "Screenshot";
-      if (modalImg && imgSrc) {
-        modalImg.src = imgSrc;
-        modalImg.alt = imgAlt;
-      }
-      if (modalTitle) {
-        modalTitle.textContent = imgAlt;
-      }
-      const bsModal = new bootstrap.Modal(modalEl);
-      bsModal.show();
-    });
-  });
-}
-
-// ============================================================================
-// 8. Dynamic Copyright Year
+// 6. Dynamic Copyright Year
 // ============================================================================
 function setDynamicYear() {
   const yearEl = document.getElementById("currentYear");

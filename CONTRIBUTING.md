@@ -2,9 +2,9 @@
 
 ## 1. Project Ownership and Maintenance
 
-**Camybr** (including the Camybr Windows Plugin, Camybr Android Mobile Application, and website) is designed, developed, and maintained by **Yash Rayjada (YBR Digital)**.
+**Camybr** (including the Camybr PC Plugin, Camybr Android Mobile Application, and website) is designed, developed, and maintained by **Yash Rayjada (YBR Digital)**.
 
-Camybr Windows Plugin is distributed as **free proprietary software (freeware)**. The source code is closed-source and owned exclusively by YBR Digital.
+Camybr PC Plugin is distributed as **free proprietary software (freeware)**. The source code is closed-source and owned exclusively by YBR Digital.
 
 ---
 
@@ -22,7 +22,7 @@ Official development of Camybr software is managed exclusively by the author.
 Users, creators, streamers, and remote professionals are warmly welcome to submit bug reports, compatibility feedback, and feature suggestions through [GitHub Issues](https://github.com/ybrdigital/camybr/issues).
 
 When reporting an issue, please include:
-- Windows version (e.g., Windows 11 24H2 64-bit)
+- OS version (e.g., Windows 11 24H2 64-bit, macOS, Linux)
 - Target software where Camybr was used (e.g., Zoom, Google Meet, Microsoft Teams, OBS Studio)
 - Android phone model and Android version
 - Connection mode (5 GHz Wi-Fi or USB Tethering)
@@ -32,7 +32,7 @@ When reporting an issue, please include:
 
 ## 4. Official Distribution & Releases
 
-Official installer binaries and checksums are distributed strictly through:
+Official installer binaries are distributed strictly through:
 - **Official GitHub Releases**: [https://github.com/ybrdigital/camybr/releases](https://github.com/ybrdigital/camybr/releases)
 - **Official Landing Page**: [https://ybrdigital.github.io/camybr/](https://ybrdigital.github.io/camybr/)
 - **Android Client (Google Play)**: [Google Play Store](https://play.google.com/store/apps/details?id=com.briyoom.camybr)

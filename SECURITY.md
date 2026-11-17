@@ -6,7 +6,7 @@ At YBR Digital, we take the security of **Camybr** and the privacy of our users 
 
 ## Supported Versions
 
-Only the latest release of the Camybr Windows Plugin and Camybr Android App receives active security fixes and updates:
+Only the latest release of the Camybr PC Plugin and Camybr Android App receives active security fixes and updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -17,7 +17,7 @@ Only the latest release of the Camybr Windows Plugin and Camybr Android App rece
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in the Camybr Windows Plugin, mobile application, website, or network streaming protocol:
+If you discover a security vulnerability in the Camybr PC Plugin, mobile application, website, or network streaming protocol:
 
 1. **Do not open a public issue.** Please report security issues confidentially.
 2. Email full vulnerability details directly to:  
@@ -25,7 +25,7 @@ If you discover a security vulnerability in the Camybr Windows Plugin, mobile ap
 3. Please include:
    - A detailed description of the vulnerability and its potential impact.
    - Exact steps or proof-of-concept (PoC) to reproduce the issue.
-   - Affected Windows Plugin version, Windows OS build, and Android device specs.
+   - Affected PC Plugin version, OS build, and Android device specs.
    - Any suggested mitigations or patches if available.
 
 ---

@@ -1,7 +1,7 @@
-# Camybr - Professional Windows Webcam & Microphone Plugin
+# Camybr - PC Plugin
 ## Installation & Setup Guide
 
-This guide walks you through installing and configuring the **Camybr Windows Plugin** on Windows 10/11 and connecting it to your Android device running Camybr over Wi-Fi or USB tethering.
+This guide walks you through installing and configuring the **Camybr PC Plugin** on your PC and connecting it to your Android device running Camybr over Wi-Fi or USB tethering.
 
 ---
 
