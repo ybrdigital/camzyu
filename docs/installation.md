@@ -60,8 +60,8 @@ Once connected, open any video app on your PC:
 - **Zoom**: Go to *Settings &rarr; Video &rarr; Camera*, select **Camybr**. For audio, select **Camybr Audio** under *Microphone*.
 - **Google Meet**: Click the three dots *&rarr; Settings &rarr; Video*, select **Camybr**. Under *Audio*, select **Camybr Audio**.
 - **Microsoft Teams**: Go to *Settings &rarr; Devices &rarr; Camera*, select **Camybr**.
-- **OBS Studio**: Under *Sources*, click **+** &rarr; **Video Capture Device**, select **Camybr**. Under *Audio Input Capture*, select **Camybr Audio**.
-- **Discord**: Go to *User Settings &rarr; Voice & Video &rarr; Video Settings*, select **Camybr**.
+- **OBS Studio & Streamlabs**: Under *Sources*, click **+** &rarr; **Video Capture Device**, select **Camybr**. Under *Audio Input Capture*, select **Camybr Audio**.
+- **Discord & Skype**: Go to *Settings &rarr; Voice & Video*, select **Camybr** for camera and **Camybr Audio** for microphone.
 
 ---
 
