@@ -1,5 +1,5 @@
 {
-  "product": "Camybr PC Plugin",
+  "product": "Camzyu PC Plugin",
   "version": "1.0.0",
   "tag": "v1.0.0",
   "releaseDate": "November 17, 2026",
@@ -7,10 +7,10 @@
   "appCompatibility": "Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio",
   "architecture": "x64",
   "licenseType": "Free Software (Freeware)",
-  "installerFilename": "Camybr-Windows-v1.0.0-Setup.exe",
-  "installerPath": "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
-  "downloadUrl": "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
-  "githubReleaseUrl": "https://github.com/ybrdigital/camybr/releases",
+  "installerFilename": "Camzyu-Windows-v1.0.0-Setup.exe",
+  "installerPath": "assets/downloads/v1.0.0/Camzyu-Windows-v1.0.0-Setup.exe",
+  "downloadUrl": "assets/downloads/v1.0.0/Camzyu-Windows-v1.0.0-Setup.exe",
+  "githubReleaseUrl": "https://github.com/ybrdigital/camzyu/releases",
   "fileSize": "12.4 MB",
   "fileSizeBytes": 12397234,
   "sha256": "7E87C904EAC0AD9D10685798CCDC982BD87703CE20545D94696144A2C7085A40"

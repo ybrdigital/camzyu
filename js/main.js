@@ -1,7 +1,7 @@
-/**
- * Camybr - PC Plugin | Modern Web Engine
+﻿/**
+ * Camzyu - PC Plugin | Modern Web Engine
  * Developer: Yash Rayjada (YBR Digital)
- * Repository: https://github.com/ybrdigital/camybr
+ * Repository: https://github.com/ybrdigital/camzyu
  * License: Freeware / Proprietary (Closed-Source)
  */
 
@@ -9,16 +9,16 @@
 // 1. Central Version Configuration & Fallback Definition
 // ============================================================================
 const DEFAULT_VERSION_CONFIG = {
-  product: "Camybr PC Plugin",
+  product: "Camzyu PC Plugin",
   version: "1.0.0",
   tag: "v1.0.0",
   windowsCompatibility: "Windows 10 / 11 (64-bit), macOS & Linux coming soon",
   appCompatibility: "Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio",
   architecture: "x64",
-  installerFilename: "Camybr-Windows-v1.0.0-Setup.exe",
-  installerPath: "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
-  downloadUrl: "assets/downloads/v1.0.0/Camybr-Windows-v1.0.0-Setup.exe",
-  githubReleaseUrl: "https://github.com/ybrdigital/camybr/releases",
+  installerFilename: "Camzyu-Windows-v1.0.0-Setup.exe",
+  installerPath: "assets/downloads/v1.0.0/Camzyu-Windows-v1.0.0-Setup.exe",
+  downloadUrl: "assets/downloads/v1.0.0/Camzyu-Windows-v1.0.0-Setup.exe",
+  githubReleaseUrl: "https://github.com/ybrdigital/camzyu/releases",
   fileSize: "12.4 MB"
 };
 
@@ -45,12 +45,12 @@ async function initVersionData() {
       activeVersionConfig = { ...DEFAULT_VERSION_CONFIG, ...data };
     }
   } catch (err) {
-    console.warn("[Camybr] Using local fallback version config:", err);
+    console.warn("[Camzyu] Using local fallback version config:", err);
   }
 
   // Optionally query GitHub API for releases
   try {
-    const ghRes = await fetch("https://api.github.com/repos/ybrdigital/camybr/releases/latest", {
+    const ghRes = await fetch("https://api.github.com/repos/ybrdigital/camzyu/releases/latest", {
       headers: { Accept: "application/vnd.github.v3+json" }
     });
     if (ghRes.ok) {
@@ -69,7 +69,7 @@ async function initVersionData() {
       }
     }
   } catch (ghErr) {
-    console.debug("[Camybr] GitHub Releases API query skipped or rate-limited:", ghErr);
+    console.debug("[Camzyu] GitHub Releases API query skipped or rate-limited:", ghErr);
   }
 
   applyVersionDataToUI(activeVersionConfig);

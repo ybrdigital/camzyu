@@ -1,12 +1,12 @@
-# Security Policy
+﻿# Security Policy
 
-At YBR Digital, we take the security of **Camybr** and the privacy of our users seriously. We appreciate the responsible disclosure of security vulnerabilities by security researchers, developers, and users.
+At YBR Digital, we take the security of **Camzyu** and the privacy of our users seriously. We appreciate the responsible disclosure of security vulnerabilities by security researchers, developers, and users.
 
 ---
 
 ## Supported Versions
 
-Only the latest release of the Camybr PC Plugin and Camybr Android App receives active security fixes and updates:
+Only the latest release of the Camzyu PC Plugin and Camzyu Android App receives active security fixes and updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -17,7 +17,7 @@ Only the latest release of the Camybr PC Plugin and Camybr Android App receives 
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in the Camybr PC Plugin, mobile application, website, or network streaming protocol:
+If you discover a security vulnerability in the Camzyu PC Plugin, mobile application, website, or network streaming protocol:
 
 1. **Do not open a public issue.** Please report security issues confidentially.
 2. Email full vulnerability details directly to:  
@@ -40,4 +40,4 @@ If you discover a security vulnerability in the Camybr PC Plugin, mobile applica
 
 ## Privacy Commitment
 
-Camybr is architected strictly as a peer-to-peer (P2P) local streaming pipeline across your Wi-Fi or USB tethering network. Video and audio streams are processed locally and are never stored on or relayed through remote cloud servers. For full details, see our [Privacy Policy](https://ybrdigital.in/camybr/privacy-policy).
+Camzyu is architected strictly as a peer-to-peer (P2P) local streaming pipeline across your Wi-Fi or USB tethering network. Video and audio streams are processed locally and are never stored on or relayed through remote cloud servers. For full details, see our [Privacy Policy](https://ybrdigital.in/camzyu/privacy-policy).
