@@ -123,7 +123,7 @@
   </div>
 
   <div class="highlight-box">
-    <strong>Core Privacy Commitment:</strong> Camzyu operates on a pure peer-to-peer (P2P) local streaming architecture. Your live video and audio streams are processed and transmitted strictly over your private local Wi-Fi network or direct USB cable to OBS Studio on your personal computer. We operate zero cloud relay servers, and we never record, store, or transmit your camera video or microphone audio over the internet.
+    <strong>Core Privacy Commitment:</strong> Camzyu operates on a pure peer-to-peer (P2P) local streaming architecture. Your live video streams are processed and transmitted strictly over your private local Wi-Fi network or direct USB cable to your personal computer. We operate zero cloud relay servers, and we never record, store, or transmit your camera video over the internet.
   </div>
 
   <h2>1. Introduction &amp; Scope</h2>
@@ -139,21 +139,20 @@
     Camzyu is strictly a local client-server pipeline operating within your private local network (LAN) or over a physical USB connection:
   </p>
   <ul>
-    <li><strong>Direct Local Transmission:</strong> Your phone hardware encodes camera video into H.264/HEVC video frames and microphone audio into AAC audio packets. These packets are transmitted directly across your local network (LAN) or USB tethering connection:
+    <li><strong>Direct Local Transmission:</strong> Your phone hardware encodes camera video into H.264/HEVC video frames. These packets are transmitted directly across your local network (LAN) or USB tethering connection:
       <ul>
         <li><strong>UDP Port 7113 (Inbound on PC):</strong> Device discovery beacon sent by the Android app across the local subnet to detect available devices.</li>
         <li><strong>TCP Port 7110 (Outbound to Phone):</strong> Control and handshake connection for remote camera settings (zoom, focus, exposure, torch).</li>
         <li><strong>TCP Port 7111 (Outbound to Phone):</strong> Dedicated raw video media stream socket.</li>
-        <li><strong>TCP Port 7112 (Outbound to Phone):</strong> Dedicated raw audio media stream socket.</li>
       </ul>
     </li>
-    <li><strong>No Cloud Relay or Intermediate Servers:</strong> Video frames and audio samples are never transmitted across the public internet, content delivery networks (CDNs), or third-party cloud storage.</li>
+    <li><strong>No Cloud Relay or Intermediate Servers:</strong> Video frames are never transmitted across the public internet, content delivery networks (CDNs), or third-party cloud storage.</li>
     <li><strong>USB Wired Mode:</strong> When connecting via USB (using standard Android USB tethering), all network packets travel exclusively across the physical USB bus (via local virtual network adapter) with zero radio exposure.</li>
   </ul>
 
   <h2>3. Android Application Permissions</h2>
   <p>
-    To operate as a live webcam feed for OBS Studio, the Android application requests the following device permissions:
+    To operate as a live webcam feed for your PC, the Android application requests the following device permissions:
   </p>
 
   <table>
@@ -171,29 +170,24 @@
         <td>Capturing the live camera feed, controlling hardware zoom, toggling device torch/flashlight, setting manual exposure compensation (EV), and configuring white balance.</td>
       </tr>
       <tr>
-        <td><code>android.permission.RECORD_AUDIO</code></td>
-        <td>Dangerous / Runtime</td>
-        <td>Capturing microphone audio (48kHz AAC) when phone audio streaming is enabled by the user. Audio is streamed in real time and is never recorded or saved to storage.</td>
-      </tr>
-      <tr>
         <td><code>android.permission.INTERNET</code></td>
         <td>Normal</td>
-        <td>Opening local TCP network sockets to deliver the video stream to OBS Studio on your PC, and communicating with Google Play Billing / RevenueCat for subscription validation.</td>
+        <td>Opening local TCP network sockets to deliver the video stream to your PC, and communicating with Google Play Billing / RevenueCat for subscription validation.</td>
       </tr>
       <tr>
         <td><code>android.permission.ACCESS_NETWORK_STATE</code><br><code>android.permission.ACCESS_WIFI_STATE</code></td>
         <td>Normal</td>
-        <td>Detecting local Wi-Fi connectivity, identifying the local IP address for socket binding, and listening for OBS Studio UDP discovery broadcasts.</td>
+        <td>Detecting local Wi-Fi connectivity, identifying the local IP address for socket binding, and listening for PC UDP discovery broadcasts.</td>
       </tr>
       <tr>
-        <td><code>android.permission.FOREGROUND_SERVICE</code><br><code>android.permission.FOREGROUND_SERVICE_CAMERA</code><br><code>android.permission.FOREGROUND_SERVICE_MICROPHONE</code></td>
+        <td><code>android.permission.FOREGROUND_SERVICE</code><br><code>android.permission.FOREGROUND_SERVICE_CAMERA</code></td>
         <td>Special / Service</td>
-        <td>Ensuring the video and audio streaming service remains continuously active when the smartphone screen is locked, dimmed, or when navigating between apps during a broadcast.</td>
+        <td>Ensuring the video streaming service remains continuously active when the smartphone screen is locked, dimmed, or when navigating between apps during a broadcast.</td>
       </tr>
       <tr>
         <td><code>android.permission.POST_NOTIFICATIONS</code></td>
         <td>Runtime (API 33+)</td>
-        <td>Displaying the persistent foreground notification required by Android to inform the user that camera and microphone streaming is active.</td>
+        <td>Displaying the persistent foreground notification required by Android to inform the user that camera streaming is active.</td>
       </tr>
       <tr>
         <td><code>android.permission.WAKE_LOCK</code></td>
@@ -213,8 +207,7 @@
     <li>Resolution preferences (e.g., 1080p, 4K, 720p).</li>
     <li>Target framerate (30 FPS or 60 FPS).</li>
     <li>Bitrate settings (8,000 kbps to 35,000 kbps).</li>
-    <li>Latency mode (Ultra-Low Latency vs. Balanced).</li>
-    <li>Audio transmission toggle (Enabled / Disabled).</li>
+    <li>Latency mode (Ultra Low Latency vs. Balanced).</li>
     <li>Studio camera preferences (Torch status, Exposure value, White balance mode).</li>
   </ul>
 
@@ -229,18 +222,18 @@
 
   <h2>5. PC Plugin &amp; Installer Details</h2>
   <p>
-    The companion <strong>Camzyu PC Plugin</strong> is free software (freeware) that provides a system-wide virtual camera (<code>Camzyu</code>) and virtual microphone (<code>Camzyu Audio</code>), compatible with OBS Studio, Zoom, Microsoft Teams, Google Meet, Discord, Skype, and desktop video applications:
+    The companion <strong>Camzyu PC Plugin</strong> is free software (freeware) that provides a system-wide virtual camera (<code>Camzyu</code>), compatible with OBS Studio, Zoom, Microsoft Teams, Google Meet, Discord, Skype, and desktop video applications:
   </p>
   <ul>
-    <li><strong>Local Web Control Server:</strong> The software hosts an embedded lightweight HTTP server strictly on <code>http://localhost:4752/</code> (IPv4 loopback address <code>127.0.0.1</code>). It is completely blocked from the outside internet and only serves local camera controls on your PC.</li>
+    <li><strong>DirectShow Virtual Camera:</strong> The software registers a standard DirectShow video capture filter on Windows that desktop applications access locally.</li>
     <li><strong>Zero Telemetry:</strong> The desktop software contains zero tracking scripts, analytics libraries, advertising SDKs, or external internet connections.</li>
-    <li><strong>Desktop Installer:</strong> The setup installer places binaries in <code>C:\Program Files\Camzyu\</code> and registers the virtual camera and virtual microphone drivers. It collects no personal information.</li>
+    <li><strong>Desktop Installer:</strong> The setup installer places binaries in <code>C:\Program Files\Camzyu\</code> and registers the DirectShow virtual camera driver. It collects no personal information.</li>
     <li><strong>Official Portal:</strong> Official binary releases, setup documentation, and the issue tracker for Camzyu are hosted at <a href="https://github.com/ybrdigital/camzyu" target="_blank">https://github.com/ybrdigital/camzyu</a>.</li>
   </ul>
 
   <h2>6. In-App Subscriptions &amp; Financial Information</h2>
   <p>
-    Camzyu offers an optional paid upgrade called <strong>Camzyu Pro</strong>, which unlocks 4K UHD resolution, 60 FPS, ultra-low latency, and the Studio Camera Suite.
+    Camzyu offers an optional paid upgrade called <strong>Camzyu Pro</strong>, which unlocks 4K UHD resolution, 60 FPS, Ultra Low Latency, and the Studio Camera Suite.
   </p>
   <div class="warning-box">
     <strong>Payment Security Notice:</strong> All purchases and subscriptions are handled exclusively by <strong>Google Play In-App Billing</strong>. The developer does not receive, view, process, or store credit card numbers, banking details, or billing addresses.
@@ -270,7 +263,7 @@
     <li>Android operating system version and free RAM/storage state.</li>
   </ul>
   <p>
-    This diagnostic information contains no camera video, audio recordings, or personal identifiers. For more details, consult the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+    This diagnostic information contains no camera video or personal identifiers. For more details, consult the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
   </p>
 
   <h2>8. Data Retention &amp; User Deletion Rights</h2>
@@ -309,10 +302,10 @@
   </p>
   <div class="meta-box">
     <p><strong>Developer / Maintainer:</strong> Yash Rayjada (YBR Digital)</p>
-    <p><strong>Product:</strong> Camzyu (Android App &amp; OBS Studio Plugin)</p>
+    <p><strong>Product:</strong> Camzyu (Android App &amp; Windows PC Plugin)</p>
     <p><strong>Support &amp; Privacy Contact:</strong> <a href="mailto:info@ybrdigital.in">info@ybrdigital.in</a></p>
     <p><strong>Official Website:</strong> <a href="https://ybrdigital.github.io/camzyu/" target="_blank">https://ybrdigital.github.io/camzyu/</a></p>
-    <p><strong>GitHub Repository:</strong> <a href="https://github.com.briyoom.camzyu" target="_blank">https://github.com.briyoom.camzyu</a></p>
+    <p><strong>GitHub Repository:</strong> <a href="https://github.com/ybrdigital/camzyu" target="_blank">https://github.com/ybrdigital/camzyu</a></p>
     <p style="font-size: 12px; color: #777; margin-top: 10px; border-top: 1px solid #e0e0e0; padding-top: 8px;">
       OBS&reg; and OBS Studio&reg; are registered trademarks of Wizards of OBS LLC. Camzyu is an independent open-source project and is not affiliated with, sponsored by, or endorsed by the OBS Project or Wizards of OBS LLC.
     </p>

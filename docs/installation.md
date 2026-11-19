@@ -28,9 +28,8 @@ This guide walks you through installing and configuring the **Camzyu PC Plugin**
 
 2. **Run the Installer**:
    Double-click `Camzyu-Windows-v1.0.0-Setup.exe` and follow the prompts. The installer will:
-   - Install `mobcam-app.exe` desktop companion into `C:\Program Files\Camzyu\`.
-   - Register the DirectShow Virtual Camera driver (`mobcam-vcam.dll`) as **Camzyu**.
-   - Register the DirectShow Virtual Microphone driver as **Camzyu Audio**.
+   - Install `camzyu-app.exe` desktop companion into `C:\Program Files\Camzyu\`.
+   - Register the DirectShow Virtual Camera driver (`camzyu-vcam.dll`) as **Camzyu**.
    - Copy high-performance FFmpeg decoders.
    - Place a desktop shortcut and register a clean uninstaller in Windows Settings.
 
@@ -57,11 +56,11 @@ This guide walks you through installing and configuring the **Camzyu PC Plugin**
 ## 4. Selecting Camzyu in Video Software
 
 Once connected, open any video app on your PC:
-- **Zoom**: Go to *Settings &rarr; Video &rarr; Camera*, select **Camzyu**. For audio, select **Camzyu Audio** under *Microphone*.
-- **Google Meet**: Click the three dots *&rarr; Settings &rarr; Video*, select **Camzyu**. Under *Audio*, select **Camzyu Audio**.
+- **Zoom**: Go to *Settings &rarr; Video &rarr; Camera*, select **Camzyu**.
+- **Google Meet**: Click the three dots *&rarr; Settings &rarr; Video*, select **Camzyu**.
 - **Microsoft Teams**: Go to *Settings &rarr; Devices &rarr; Camera*, select **Camzyu**.
-- **OBS Studio & Streamlabs**: Under *Sources*, click **+** &rarr; **Video Capture Device**, select **Camzyu**. Under *Audio Input Capture*, select **Camzyu Audio**.
-- **Discord & Skype**: Go to *Settings &rarr; Voice & Video*, select **Camzyu** for camera and **Camzyu Audio** for microphone.
+- **OBS Studio & Streamlabs**: Under *Sources*, click **+** &rarr; **Video Capture Device**, select **Camzyu**.
+- **Discord & Skype**: Go to *Settings &rarr; Voice & Video*, select **Camzyu** under *Camera*.
 
 ---
 

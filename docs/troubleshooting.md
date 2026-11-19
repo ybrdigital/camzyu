@@ -5,10 +5,10 @@ This guide covers common issues, diagnostic procedures, firewall configuration, 
 
 ---
 
-## 1. Camzyu Camera or Microphone is Not Appearing in Video Apps
+## 1. Camzyu Camera is Not Appearing in Video Apps
 
 ### Symptoms
-In Zoom, Teams, Meet, or Discord settings, **Camzyu** or **Camzyu Audio** is not listed in the camera or microphone dropdown.
+In Zoom, Teams, Meet, or Discord settings, **Camzyu** is not listed in the camera dropdown.
 
 ### Solutions
 1. **Verify PC Plugin Installation**:
@@ -16,7 +16,7 @@ In Zoom, Teams, Meet, or Discord settings, **Camzyu** or **Camzyu Audio** is not
 2. **Re-register the DirectShow Filters**:
    Open PowerShell as Administrator and run:
    ```powershell
-   regsvr32.exe /s "C:\Program Files\Camzyu\mobcam-vcam.dll"
+   regsvr32.exe /s "C:\Program Files\Camzyu\camzyu-vcam.dll"
    ```
 3. **Restart the Video Application**:
    Some applications (like Zoom or OBS) enumerate cameras only upon startup. Close and relaunch the app.
@@ -48,7 +48,7 @@ Windows Defender Firewall may prompt to allow network connections on the first r
 New-NetFirewallRule -DisplayName "Camzyu PC Plugin - UDP Discovery" -Direction Inbound -LocalPort 7113 -Protocol UDP -Action Allow
 
 # Allow outbound TCP media streaming & controls
-New-NetFirewallRule -DisplayName "Camzyu PC Plugin - TCP Media & Control" -Direction Outbound -RemotePort 7110,7111,7112 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "Camzyu PC Plugin - TCP Media & Control" -Direction Outbound -RemotePort 7110,7111 -Protocol TCP -Action Allow
 ```
 
 ---

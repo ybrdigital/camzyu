@@ -5,7 +5,7 @@
   <br><br>
   <h3>Your Android Phone. Your Professional PC Camera.</h3>
   <p>
-    Transform your Android smartphone into a high-definition webcam and studio microphone for your computer. Stream video and synchronized audio directly into <strong>Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio, Skype</strong>, and desktop applications with ultra-low latency over Wi-Fi or USB.
+    Transform your Android smartphone into a high-definition webcam for your computer. Stream pristine video directly into <strong>Zoom, Google Meet, Microsoft Teams, Discord, OBS Studio, Skype</strong>, and desktop applications with ultra-low latency over Wi-Fi or USB.
   </p>
   <p>
     <a href="https://ybrdigital.github.io/camzyu/"><img src="https://img.shields.io/badge/Website-GitHub%20Pages-00E676?style=for-the-badge&logo=github&logoColor=black" alt="Official Website"></a>
@@ -19,7 +19,7 @@
 
 ## Overview
 
-**Camzyu PC Plugin** is a high-performance, system-wide virtual webcam and virtual microphone for Windows 10 and Windows 11 (64-bit). It enables live streamers, remote professionals, students, and content creators to use their smartphone's superior camera optics, autofocus, and microphone directly on PC without requiring capture cards, dummy drivers, or cloud streaming subscriptions.
+**Camzyu PC Plugin** is a high-performance, system-wide virtual webcam for Windows 10 and Windows 11 (64-bit). It enables live streamers, remote professionals, students, and content creators to use their smartphone's superior camera optics, autofocus, and sensors directly on PC without requiring capture cards, dummy drivers, or cloud streaming subscriptions.
 
 - **Official Website & Live Documentation**: [https://ybrdigital.github.io/camzyu/](https://ybrdigital.github.io/camzyu/)
 - **Official GitHub Repository**: [https://github.com/ybrdigital/camzyu](https://github.com/ybrdigital/camzyu)
@@ -29,7 +29,7 @@
 
 ## Key Features
 
-1. **Universal Desktop Compatibility**: Appears natively as a high-fidelity video device (**Camzyu**) and audio capture device (**Camzyu Audio**) across desktop apps:
+1. **Universal Desktop Compatibility**: Appears natively as a high-fidelity DirectShow video device (**Camzyu**) across desktop apps:
    - **Video Conferencing**: Zoom, Google Meet, Microsoft Teams, Skype, Webex
    - **Broadcasting & Streaming**: OBS Studio, Streamlabs OBS, vMix, XSplit
    - **Gaming & Chat**: Discord, Telegram Desktop, Slack
@@ -38,9 +38,8 @@
 4. **Ultra-Low Latency Pipeline**: Peer-to-peer frame transmission over local 5 GHz Wi-Fi or wired USB.
 5. **Automatic Subnet Discovery**: Instant UDP beacon detection automatically pairs active Camzyu Android phones on your local network.
 6. **Plug-and-Play USB Tethering**: Zero-jitter wired connectivity using standard Android USB tethering for high-reliability environments where Wi-Fi is congested.
-7. **Synchronized 48 kHz Stereo Audio**: Use your smartphone as a high-clarity PC wireless microphone with automatic timestamp synchronization.
-8. **Hardware-Accelerated Decoding**: High-performance H.264 video decoding powered by FFmpeg with real-time planar rendering.
-9. **100% Free PC Plugin**: The PC Plugin is completely free software (freeware, no recurring PC fees).
+7. **Hardware-Accelerated Decoding**: High-performance H.264 video decoding powered by FFmpeg with real-time planar rendering.
+8. **100% Free PC Plugin**: The PC Plugin is completely free software (freeware, no recurring PC fees).
 
 ---
 
@@ -57,14 +56,13 @@
 
 ## Network Architecture & Ports
 
-Camzyu operates purely on a peer-to-peer (P2P) local network architecture. Zero video or audio data is ever routed through external servers or cloud services.
+Camzyu operates purely on a peer-to-peer (P2P) local network architecture. Zero video data is ever routed through external servers or cloud services.
 
 | Port | Protocol | Direction | Listening Component | Initiator | Purpose |
 |---|---|---|---|---|---|
 | **7113** | UDP | Inbound on PC | PC Plugin | Android App | Local subnet device beacon auto-discovery |
 | **7110** | TCP | Outbound from PC | Android App | PC Plugin | Control handshake and camera settings |
 | **7111** | TCP | Outbound from PC | Android App | PC Plugin | H.264 video media stream |
-| **7112** | TCP | Outbound from PC | Android App | PC Plugin | AAC audio media stream |
 
 ---
 
@@ -90,7 +88,7 @@ Official binary downloads are published via [GitHub Releases](https://github.com
 3. **Launch Camzyu on PC & Phone**:
    - **Wired USB (Lowest latency)**: Connect phone with a USB cable, enable **USB Tethering** in phone settings, tap **Start Stream** in Camzyu on Android.
    - **Wireless Wi-Fi**: Connect phone and PC to the same 5 GHz Wi-Fi network, tap **Start Stream** in Camzyu on Android.
-4. **Select Camera in Any App**: Open Zoom, Microsoft Teams, Google Meet, Discord, or OBS Studio, and select **Camzyu** as your camera and **Camzyu Audio** as your microphone!
+4. **Select Camera in Any App**: Open Zoom, Microsoft Teams, Google Meet, Discord, or OBS Studio, and select **Camzyu** as your camera!
 
 For complete step-by-step setup details, see [docs/installation.md](docs/installation.md).
 
@@ -124,7 +122,7 @@ camzyu/
 │
 └── docs/                     # User documentation
     ├── installation.md       # Installation guide & app compatibility
-    └── troubleshooting.md    # Diagnostics for connectivity, latency & audio
+    └── troubleshooting.md    # Diagnostics for connectivity, latency & video
 ```
 
 ---
@@ -132,7 +130,7 @@ camzyu/
 ## Licensing & Distribution Model
 
 ### Free PC Plugin (Freeware, Closed-Source)
-The **Camzyu PC Plugin** executable, virtual camera, virtual microphone driver, and installer are distributed as **free proprietary software (freeware)**. You are free to download, install, and use the Software free of charge for personal, creative, streaming, and commercial purposes. The source code is closed-source and owned exclusively by **YBR Digital**.
+The **Camzyu PC Plugin** executable, virtual camera driver, and installer are distributed as **free proprietary software (freeware)**. You are free to download, install, and use the Software free of charge for personal, creative, streaming, and commercial purposes. The source code is closed-source and owned exclusively by **YBR Digital**.
 
 ### Camzyu Android Mobile Application
 The **Camzyu Android Mobile Application** distributed through the Google Play Store is a proprietary product of **YBR Digital**.

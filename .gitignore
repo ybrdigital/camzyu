@@ -48,6 +48,12 @@ google-services.json
 *.aab
 *.apk
 
+# Private OBS Plugin Exclusions (Private Use Only - Do Not Publish)
+*obs-plugin*
+*OBS-Plugin*
+*obs_plugin*
+camzyu-obs-plugin/
+
 # OS artifacts
 .DS_Store
 Thumbs.db

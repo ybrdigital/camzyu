@@ -40,4 +40,4 @@ If you discover a security vulnerability in the Camzyu PC Plugin, mobile applica
 
 ## Privacy Commitment
 
-Camzyu is architected strictly as a peer-to-peer (P2P) local streaming pipeline across your Wi-Fi or USB tethering network. Video and audio streams are processed locally and are never stored on or relayed through remote cloud servers. For full details, see our [Privacy Policy](https://ybrdigital.in/camzyu/privacy-policy).
+Camzyu is architected strictly as a peer-to-peer (P2P) local streaming pipeline across your Wi-Fi or USB tethering network. Video streams are processed locally and are never stored on or relayed through remote cloud servers. For full details, see our [Privacy Policy](https://ybrdigital.in/camzyu/privacy-policy).
